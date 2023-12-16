@@ -1,5 +1,6 @@
 Clear-Host
 Set-Location ..
-& "node" "start-module.js" "--test"
+& "nodemon" "start-module.js" "--test"
 Pause
+Set-Location cli
 Clear-Host
