@@ -20,7 +20,7 @@ import chalk from 'chalk'
 class Main {
     static async main() {
         /**
-         * Write the app title
+         * Write the app title in a nice color
          */
         console.log(chalk.rgb(101, 50, 135)('╭──────────────────────────────────────────╮'))
         console.log(chalk.rgb(101, 50, 135)('│ Stefan AI 4 - Motivational Video Package │'))
