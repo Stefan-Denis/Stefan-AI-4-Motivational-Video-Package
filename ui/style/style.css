@@ -63,6 +63,7 @@ body {
     z-index: 1;
     max-height: 800px;
     min-height: 700px;
+    min-width: 1000px;
 
     width: calc(100% - 50px);
     max-width: 1600px;
@@ -262,4 +263,153 @@ main {
     color: white;
     font-size: 0.8em;
     transition: all 0.3s ease;
+}
+
+.video-manager-button {
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 6px;
+    padding-left: 10px;
+}
+
+.video-manager-button:hover {
+    background-color: rgba(255, 255, 255, 0.127);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    transition: all 0.05s ease-in;
+}
+
+.video-manager-button:active {
+    background-color: rgba(0, 0, 0, 0.233);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.video-script-editor-text-area {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: calc(100% - 20px);
+    resize: none;
+    height: 320px;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px 20px 14px 14px;
+}
+
+.start-button {
+    background: rgba(40, 167, 69, 0.1);
+    /* Bootstrap success color with transparency for glass effect */
+    border: 1px solid rgba(40, 167, 69, 0.5);
+    /* Bootstrap success color */
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+    /* Bootstrap success color */
+    color: #28a745;
+    /* Bootstrap success color */
+    transition: all 0.1s ease;
+    /* Transition effect */
+    border-radius: 10px;
+    padding: 5px 40px;
+}
+
+.start-button:hover {
+    background: rgba(40, 167, 69, 0.2);
+    /* Bootstrap success color with transparency for glass effect */
+    /* Add more properties as needed */
+}
+
+.start-button:active {
+    background: rgba(40, 167, 69, 0.3);
+    /* Bootstrap success color with transparency for glass effect */
+    /* Add more properties as needed */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal {
+    width: 600px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.spinner {
+    margin-left: 20px;
+    background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
+    width: 100px;
+    height: 100px;
+    animation: spinning82341 1.7s linear infinite;
+    text-align: center;
+    border-radius: 50px;
+    filter: blur(1px);
+    box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.spinner1 {
+    background-color: rgb(36, 36, 36);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    filter: blur(10px);
+}
+
+.success {
+    background-color: rgb(22, 158, 26);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 30px 0px rgb(0, 255, 0);
+    background-image: linear-gradient(rgb(0, 255, 0) 35%, rgb(0, 255, 0));
+    animation: puslse-spinner 4s linear infinite;
+}
+
+.success1 {
+    background-color: rgb(12, 53, 14);
+}
+
+@keyframes spinning82341 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes puslse-spinner {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.9);
+        /* Increase the alpha value to make the green color more intense */
+    }
+
+    20% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.9);
+        /* Increase the alpha value to make the green color more intense */
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 30px rgba(0, 255, 0, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+    }
 }
