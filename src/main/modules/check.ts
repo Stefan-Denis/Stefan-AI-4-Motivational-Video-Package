@@ -16,6 +16,8 @@ import chalk from 'chalk'
 import fs from 'fs-extra'
 import path from 'path'
 
+import TTS from './tts.js'
+
 /**
  * @constant __dirname
  * @description The directory name of the current module.
@@ -218,5 +220,20 @@ export default class Check {
             console.log(chalk.redBright('The subtitles file is empty'))
             process.exit(1)
         })
+    }
+
+    /**
+     * @method videoAndScript
+     * @description Checks if the video count is equal to the scripts
+     */
+    static async videoAndScriptCount() {
+        const scripts: Array<string> = await TTS.parseScript()
+        const clips = JSON.parse(fs.readFileSync(path.join(__dirname, '../../../storage/config/clipsOrder.json'), 'utf-8'))
+
+        if (scripts.length != clips.length) {
+            console.clear()
+            console.log('❌ ' + chalk.redBright('The amount of lines inside the script does not match the amount of videos provided!'))
+            process.exit(1)
+        }
     }
 }
