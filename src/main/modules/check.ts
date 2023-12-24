@@ -156,7 +156,7 @@ export default class Check {
     }
 
     /**
-     * Checks if the videos array from clipsOrder.json is empty or not.
+     * Checks if the videos array from clipsOrder.json is empty.
      * @param videos The videos array from clipsOrder.json.
      * @returns 
      */
